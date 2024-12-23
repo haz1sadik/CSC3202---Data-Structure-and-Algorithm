@@ -11,18 +11,20 @@ public class MukaBukuApp {
         do {
             System.out.println("\n====== LAMAN MUKA BUKU ======");
             System.out.println("========= by HAZUAN =========");
-            System.out.println("\n" +
-                    "+--------+------------------+\n" +
-                    "| Option |     Function     |\n" +
-                    "+--------+------------------+\n" +
-                    "|      1 | Create Profile   |\n" +
-                    "|      2 | Delete Profile   |\n" +
-                    "|      3 | Search Profile   |\n" +
-                    "|      4 | Modify Profile   |\n" +
-                    "|      5 | Add Friend       |\n" +
-                    "|      6 | Display Profiles |\n" +
-                    "|      7 | Exit             |\n" +
-                    "+--------+------------------+\n");
+            System.out.println("""
+
+                    +--------+------------------+
+                    | Option |     Function     |
+                    +--------+------------------+
+                    |      1 | Create Profile   |
+                    |      2 | Delete Profile   |
+                    |      3 | Search Profile   |
+                    |      4 | Modify Profile   |
+                    |      5 | Add Friend       |
+                    |      6 | Display Profiles |
+                    |      7 | Exit             |
+                    +--------+------------------+
+                    """);
             System.out.print("Enter your choice: ");
             choice = scanner.nextInt();
             scanner.nextLine(); // Consume newline
