@@ -13,7 +13,6 @@ class WordFrequencyBST {
         System.out.print("Order (1 : Increasing | 2 : Decreasing): ");
         int order = scanner.nextInt();
 
-        // Split text into words and add to BST
         String[] words = text.split("\\W+");
         for (String word : words) {
             if (!word.isEmpty()) {
@@ -21,10 +20,8 @@ class WordFrequencyBST {
             }
         }
 
-        // Get words in alphabetical order
         List<BST> nodesInAlphabetical = new ArrayList<>();
         bst.getWordsAlphabetical(nodesInAlphabetical);
-
 
         if (order == 2) {
             System.out.println("\n    In Decreasing Order");
@@ -45,7 +42,6 @@ class WordFrequencyBST {
                 System.out.printf("| %-10s | %-9s |\n", BST.word, BST.count);
             }
             System.out.println("--------------------------");
-
         } else {
             System.out.println("Invalid order");
         }

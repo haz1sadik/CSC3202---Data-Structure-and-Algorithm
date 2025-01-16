@@ -5,18 +5,15 @@ class BST {
     String word;
     int count;
     BST left, right;
+    private BST root;
 
     public BST(String word) {
         this.word = word;
         this.count = 1;
     }
-
-    private BST root;
-
     public void addWord(String word) {
         root = addWordRecursive(root, word);
     }
-
     private BST addWordRecursive(BST BST, String word) {
         if (BST == null) {
             return new BST(word);
@@ -31,14 +28,11 @@ class BST {
         } else {
             BST.count++;
         }
-
         return BST;
     }
-
     public void getWordsAlphabetical(List<BST> BSTS) {
         inorderTraverse(root, BSTS);
     }
-
     private void inorderTraverse(BST BST, List<BST> BSTS) {
         if (BST != null) {
             inorderTraverse(BST.left, BSTS);
